@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="240" height="240" role="img" aria-label="Tako mascot">
+  <title>Tako</title>
+
+  <!-- Rounded card background -->
+  <rect width="1024" height="1024" rx="220" fill="#F06858"/>
+
+  <!-- Whole body floats up and down -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0 0; 0 -16; 0 0"
+      keyTimes="0; 0.5; 1"
+      dur="3.6s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1"/>
+
+    <!-- Tentacles, each swaying with slightly different period & phase -->
+    <rect x="295" y="570" width="56" height="180" rx="28" fill="#FFBCB5">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-5 323 580; 5 323 580; -5 323 580"
+        dur="2.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="381" y="570" width="56" height="210" rx="28" fill="#FFBCB5">
+      <animateTransform attributeName="transform" type="rotate"
+        values="4 409 580; -4 409 580; 4 409 580"
+        dur="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="484" y="570" width="56" height="230" rx="28" fill="#FFBCB5">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-3 512 580; 3 512 580; -3 512 580"
+        dur="2.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="587" y="570" width="56" height="210" rx="28" fill="#FFBCB5">
+      <animateTransform attributeName="transform" type="rotate"
+        values="4 615 580; -4 615 580; 4 615 580"
+        dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="673" y="570" width="56" height="180" rx="28" fill="#FFBCB5">
+      <animateTransform attributeName="transform" type="rotate"
+        values="-5 701 580; 5 701 580; -5 701 580"
+        dur="2.7s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Head -->
+    <ellipse cx="512" cy="400" rx="260" ry="240" fill="#FFBCB5"/>
+
+    <!-- Left eye - blinks every ~4s -->
+    <ellipse cx="420" cy="410" rx="50" ry="54" fill="white">
+      <animate attributeName="ry"
+        values="54; 54; 4; 54; 54"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="430" cy="420" rx="28" ry="30" fill="#2D3436">
+      <animate attributeName="ry"
+        values="30; 30; 2; 30; 30"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="416" cy="400" r="12" fill="white">
+      <animate attributeName="r"
+        values="12; 12; 0; 12; 12"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Right eye - synced -->
+    <ellipse cx="604" cy="410" rx="50" ry="54" fill="white">
+      <animate attributeName="ry"
+        values="54; 54; 4; 54; 54"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="614" cy="420" rx="28" ry="30" fill="#2D3436">
+      <animate attributeName="ry"
+        values="30; 30; 2; 30; 30"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="600" cy="400" r="12" fill="white">
+      <animate attributeName="r"
+        values="12; 12; 0; 12; 12"
+        keyTimes="0; 0.92; 0.95; 0.98; 1"
+        dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Smile -->
+    <path d="M 470 480 Q 512 516 554 480" stroke="#E07060" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+    <!-- Cheeks - breathing -->
+    <ellipse cx="348" cy="460" rx="34" ry="22" fill="#F09088" opacity="0.6">
+      <animate attributeName="opacity" values="0.65; 0.3; 0.65" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="676" cy="460" rx="34" ry="22" fill="#F09088" opacity="0.6">
+      <animate attributeName="opacity" values="0.65; 0.3; 0.65" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

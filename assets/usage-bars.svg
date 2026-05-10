@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 240" role="img" aria-label="Real-time usage stats">
+  <title>Real-time usage statistics</title>
+  <defs>
+    <style>
+      .card-bg   { fill:#FAFAFA; stroke:#E5E5E5; stroke-width:1; }
+      .title     { font:700 14px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#2D3436; }
+      .subtitle  { font:11px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#888; }
+      .label     { font:11px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#666; }
+      .pct       { font:600 11px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#2D3436; }
+      .bar-track { fill:#E8E8E8; }
+      .big-num   { font:700 24px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#2D3436; }
+      .small-num { font:600 13px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; fill:#2D3436; }
+    </style>
+  </defs>
+
+  <!-- ============ Card 1: Claude Subscription ============ -->
+  <g>
+    <rect class="card-bg" x="20" y="20" width="250" height="200" rx="12"/>
+    <text class="title" x="36" y="48">Claude Subscription</text>
+    <text class="subtitle" x="36" y="65">Max plan · resets 22:30</text>
+
+    <!-- 5h -->
+    <text class="label" x="36" y="98">5h window</text>
+    <text class="pct"   x="254" y="98" text-anchor="end">47%</text>
+    <rect class="bar-track" x="36" y="104" width="218" height="8" rx="4"/>
+    <rect x="36" y="104" width="0" height="8" rx="4" fill="#F06858">
+      <animate attributeName="width" values="0;102.5;102.5;102.5;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- 7d -->
+    <text class="label" x="36" y="138">7d window</text>
+    <text class="pct"   x="254" y="138" text-anchor="end">18%</text>
+    <rect class="bar-track" x="36" y="144" width="218" height="8" rx="4"/>
+    <rect x="36" y="144" width="0" height="8" rx="4" fill="#F06858">
+      <animate attributeName="width" values="0;39.2;39.2;39.2;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" begin="0.15s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Opus -->
+    <text class="label" x="36" y="178">Opus model</text>
+    <text class="pct"   x="254" y="178" text-anchor="end">35%</text>
+    <rect class="bar-track" x="36" y="184" width="218" height="8" rx="4"/>
+    <rect x="36" y="184" width="0" height="8" rx="4" fill="#F06858">
+      <animate attributeName="width" values="0;76.3;76.3;76.3;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" begin="0.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============ Card 2: Codex Plus ============ -->
+  <g>
+    <rect class="card-bg" x="290" y="20" width="250" height="200" rx="12"/>
+    <text class="title" x="306" y="48">Codex Subscription</text>
+    <text class="subtitle" x="306" y="65">Plus plan · resets 21:00</text>
+
+    <!-- 5h -->
+    <text class="label" x="306" y="98">5h window</text>
+    <text class="pct"   x="524" y="98" text-anchor="end">61%</text>
+    <rect class="bar-track" x="306" y="104" width="218" height="8" rx="4"/>
+    <rect x="306" y="104" width="0" height="8" rx="4" fill="#10A37F">
+      <animate attributeName="width" values="0;133;133;133;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" begin="0.4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- 7d -->
+    <text class="label" x="306" y="138">7d window</text>
+    <text class="pct"   x="524" y="138" text-anchor="end">29%</text>
+    <rect class="bar-track" x="306" y="144" width="218" height="8" rx="4"/>
+    <rect x="306" y="144" width="0" height="8" rx="4" fill="#10A37F">
+      <animate attributeName="width" values="0;63.2;63.2;63.2;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" begin="0.55s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Helper hint -->
+    <text class="label" x="306" y="178" fill="#999">requests today</text>
+    <text class="small-num" x="524" y="178" text-anchor="end">142</text>
+    <text class="label" x="306" y="200" fill="#999">tokens this week</text>
+    <text class="small-num" x="524" y="200" text-anchor="end">1.8M</text>
+  </g>
+
+  <!-- ============ Card 3: Tako Proxy (live) ============ -->
+  <g>
+    <rect class="card-bg" x="560" y="20" width="260" height="200" rx="12"/>
+
+    <!-- Live dot pulses -->
+    <circle cx="804" cy="38" r="4" fill="#10A37F">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text class="subtitle" x="794" y="42" text-anchor="end" fill="#10A37F" font-weight="600">live</text>
+
+    <text class="title" x="576" y="48">Tako Proxy</text>
+    <text class="subtitle" x="576" y="65">tako.shiroha.tech</text>
+
+    <!-- Today cost -->
+    <text class="label" x="576" y="92">Today</text>
+    <text class="big-num" x="576" y="116">
+      <tspan fill="#F06858">$</tspan>
+      <tspan>
+        1.24
+        <animate attributeName="opacity" values="1;1;1;0;0;0;1" keyTimes="0;0.3;0.4;0.45;0.55;0.6;1" dur="6s" repeatCount="indefinite"/>
+      </tspan>
+    </text>
+    <text class="subtitle" x="640" y="116">/ $20.00</text>
+
+    <!-- Today bar -->
+    <rect class="bar-track" x="576" y="128" width="228" height="6" rx="3"/>
+    <rect x="576" y="128" width="0" height="6" rx="3" fill="#F06858">
+      <animate attributeName="width" values="0;14.1;14.1;14.1;0"
+        keyTimes="0;0.2;0.85;0.92;1" dur="5s" begin="0.7s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Stats grid -->
+    <text class="label" x="576" y="166">requests</text>
+    <text class="small-num" x="576" y="184">87</text>
+
+    <text class="label" x="660" y="166">tokens</text>
+    <text class="small-num" x="660" y="184">4.3M</text>
+
+    <text class="label" x="744" y="166">total</text>
+    <text class="small-num" x="744" y="184">$12.65</text>
+  </g>
+</svg>

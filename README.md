@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/hero-logo.svg" alt="Tako" width="160" height="160"/>
+
 # Tako CLI
 
 **一个 CLI，管所有家 AI 编码工具 · 一份用量面板，看清所有家 API 花销**
@@ -22,6 +24,10 @@ Tako 是一个 AI 编码工具的**统一启动器**和**会话管理层**。
 
 ## 一处配置，全家通用
 
+<div align="center">
+<img src="./assets/providers-orbit.svg" alt="Multi-provider unified management" width="100%"/>
+</div>
+
 不再为每家工具单独维护一份 API key 和 base URL。Tako 把"工具"和"服务商"解耦：
 
 | Provider 类型 | 说明 | 适配工具 |
@@ -39,21 +45,9 @@ Tako 是一个 AI 编码工具的**统一启动器**和**会话管理层**。
 
 每家 provider 的额度模型不一样——Tako 把它们归一化到一个数据结构，UI 里一眼看清：
 
-```
-┌─ Claude Subscription (Max) ──────────────────────────┐
-│ 5h 窗口    ████████░░░░░░░░  47%   重置 22:30        │
-│ 7d 窗口    ███░░░░░░░░░░░░░  18%   重置 周日 04:00   │
-│ Opus 模型  ██████░░░░░░░░░░  35%                     │
-└──────────────────────────────────────────────────────┘
-┌─ Codex Subscription (Plus) ──────────────────────────┐
-│ 5h 窗口    ██████████░░░░░░  61%   重置 21:00        │
-│ 7d 窗口    █████░░░░░░░░░░░  29%                     │
-└──────────────────────────────────────────────────────┘
-┌─ Tako Proxy ─────────────────────────────────────────┐
-│ 今日花费   $1.24 / $20.00       请求 87 次           │
-│ 累计花费   $12.65               token 4.3M           │
-└──────────────────────────────────────────────────────┘
-```
+<div align="center">
+<img src="./assets/usage-bars.svg" alt="Real-time usage stats" width="100%"/>
+</div>
 
 - **Claude / Codex 订阅**：直接调官方 quota API 拉滑动窗口
 - **Tako 中继**：每次请求按真实模型计费，看到的是聚合后的 token / cost / 请求数
