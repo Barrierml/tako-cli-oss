@@ -1,0 +1,65 @@
+{
+  "name": "tako-cli",
+  "version": "0.2.53",
+  "description": "Tako CLI — unified launcher and agent session manager for Claude Code, Codex, Gemini",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/Barrierml/tako-cli-oss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Barrierml/tako-cli-oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Barrierml/tako-cli-oss/issues"
+  },
+  "bin": {
+    "tako": "./dist/index.js"
+  },
+  "files": [
+    "install.sh",
+    "install.ps1",
+    "dist",
+    "skills",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "bump": "bun scripts/bump.ts",
+    "test": "bun test",
+    "test:unit": "bun test tests/unit.*.test.ts",
+    "test:integration": "bun test tests/integration.*.test.ts",
+    "test:platform": "bun test tests/platform.*.test.ts",
+    "test:pre-release": "bun test tests/pre-release.test.ts",
+    "test:e2e": "bash scripts/test-install.sh",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "release": "bun run test:pre-release && bun scripts/bump.ts patch && npm publish --registry https://registry.npmjs.org",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "bun-types": "latest"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "agent",
+    "claude",
+    "claude-code",
+    "codex",
+    "gemini",
+    "session-manager",
+    "acp",
+    "approval"
+  ],
+  "dependencies": {
+    "@inkjs/ui": "^2.0.0",
+    "@openpanel/sdk": "^1.0.4",
+    "ink": "^6.6.0",
+    "qrcode-terminal": "^0.12.0",
+    "react": "^19.2.3",
+    "smol-toml": "^1.3.1"
+  }
+}

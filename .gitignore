@@ -1,0 +1,39 @@
+# Build outputs
+dist/
+*.tsbuildinfo
+
+# Dependencies
+node_modules/
+bun.lock
+package-lock.json
+yarn.lock
+
+# Local environment / auth (CRITICAL — npm tokens go here)
+.npmrc
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local Claude Code config
+.claude/
+.cursor/
+
+# Logs
+*.log
+
+# Temp tako artifacts
+*.tako-*
+.tako-*
+
+# Test artifacts
+coverage/
+.nyc_output/
